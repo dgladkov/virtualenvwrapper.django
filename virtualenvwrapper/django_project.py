@@ -19,7 +19,7 @@ def template(args):
     project, project_dir = args
     os.chdir(project_dir)
     subprocess.check_call(['pip', 'install', 'django'])
-    call_args = ['django-admin.py', 'startproject', project]
+    call_args = ['django-admin.py', 'startproject', project, '-v', '2']
     django_template = os.environ.get('DJANGO_DEFAULT_PROJECT_TEMPLATE')
     django_template_extensions = os.environ.get('DJANGO_DEFAULT_PROJECT_TEMPLATE_EXTENSIONS')
     if django_template:
